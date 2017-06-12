@@ -16,7 +16,7 @@ OUTDIR=/mnt/output
 mkdir ./output
 
 #echo "Build image"
-docker build -t $DUSR/$DREPO:latest $DDIR
+docker build -t $DUSR/$DREPO:latest .
 
 #echo "Run container"
 docker run \
