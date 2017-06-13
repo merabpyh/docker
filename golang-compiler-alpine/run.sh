@@ -17,6 +17,9 @@ REPO=$2
 # USR/DREPO is a your dockerhub repo
 DREPO=alpine.go.compiler
 
+#echo "Create output dir"
+if [ ! -d "output" ]; then mkdir output; fi
+
 # For option -v HOSTdir:CONTdir
 INDIR=$(pwd)/output
 OUTDIR=/mnt/output
