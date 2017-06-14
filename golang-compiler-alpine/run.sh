@@ -2,17 +2,19 @@
 
 # Run from the directory with Dockerfile
 
-if [ "$#" -ne 2 ]
+if [ "$#" -ne 1 ]
 then
-  echo "Usage: ./run.sh \"USER\" \"REPO without user\""
-  echo "Like: ./run.sh merabpyh checker-client"
-  echo "Be careful, do not use special characters in the user or repo name"
+  echo "Usage: ./run.sh USER/REPO"
+  echo "Like: ./run.sh merabpyh/checker-client"
+  echo "Be careful, use the /"//" symbol in argument"
   exit 1
 fi
 
 # USR/REPO is a your github repo
-USR=$1
-REPO=$2
+
+USR=$(echo $1 | awk -F/ '{print $1}')
+REPO=$(echo $1 | awk -F/ '{print $2}')
+
 
 # USR/DREPO is a your dockerhub repo
 DREPO=alpine.go.compiler
