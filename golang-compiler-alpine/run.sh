@@ -5,8 +5,7 @@
 if [ "$#" -ne 1 ]
 then
   echo "Usage: ./run.sh USER/REPO"
-  echo "Like: ./run.sh merabpyh/checker-client"
-  echo "Be careful, use the /"//" symbol in argument"
+  echo "Use the \"/\" symbol in argument"
   exit 1
 fi
 
