@@ -6,5 +6,5 @@
 4) Забрать из директории output бинарник
 5) В дальнейшем повторять шаг 4 с другими репозиториями
 
-sudo build.sh merabpyh
+sudo build.sh
 sudo run.sh merabpyh/checker-client
